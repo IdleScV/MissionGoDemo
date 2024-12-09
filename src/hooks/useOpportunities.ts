@@ -1,22 +1,37 @@
-import { useState, useMemo } from 'react';
-import { opportunities } from '../data/opportunities';
-import { SponsorshipOpportunity } from '../types';
+import { useState, useMemo } from "react";
+import { opportunities } from "../data/opportunities";
+import { SponsorshipOpportunity, OpportunityTypeFilter } from "../types";
 
 export function useOpportunities() {
-  const [searchTerm, setSearchTerm] = useState('');
-  const [selectedType, setSelectedType] = useState('all');
+  const [searchTerm, setSearchTerm] = useState<string>("");
+  const [selectedType, setSelectedType] =
+    useState<OpportunityTypeFilter>("all");
 
   const filteredOpportunities = useMemo(() => {
-    return opportunities.filter((opportunity) => {
-      const matchesSearch = (
-        opportunity.name.toLowerCase().includes(searchTerm.toLowerCase()) ||
-        opportunity.location.toLowerCase().includes(searchTerm.toLowerCase())
-      );
-      
-      const matchesType = selectedType === 'all' || opportunity.type === selectedType;
-      
-      return matchesSearch && matchesType;
-    });
+    // Add debugging logs
+    console.log("Running filteredOpportunities memo...");
+    console.log("Current searchTerm:", searchTerm);
+    console.log("Current selectedType:", selectedType);
+
+    // Ensure we’re looking at the right data
+    console.log("All opportunities:", opportunities);
+
+    const searchValue = searchTerm.toLowerCase();
+    const result = opportunities.filter(
+      (opportunity: SponsorshipOpportunity) => {
+        const matchesSearch =
+          opportunity.name.toLowerCase().includes(searchValue) ||
+          opportunity.location.toLowerCase().includes(searchValue);
+
+        const matchesType =
+          selectedType === "all" || opportunity.type === selectedType;
+
+        return matchesSearch && matchesType;
+      }
+    );
+
+    console.log("Filtered opportunities based on current filters:", result);
+    return result;
   }, [searchTerm, selectedType]);
 
   return {

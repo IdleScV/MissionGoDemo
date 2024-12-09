@@ -1,7 +1,7 @@
 export interface SponsorshipOpportunity {
   id: string;
   name: string;
-  type: 'church' | 'missionary';
+  type: "church" | "missionary";
   location: string;
   description: string;
   goal: number;
@@ -18,7 +18,7 @@ export interface SponsorshipOpportunity {
 export interface SponsorshipTier {
   name: string;
   amount: number;
-  frequency: 'monthly';
+  frequency: "monthly";
   benefits: string[];
 }
 
@@ -33,3 +33,6 @@ export interface Update {
   content: string;
   imageUrl?: string;
 }
+
+// Add a helper type to handle the "all" filtering scenario
+export type OpportunityTypeFilter = "all" | "church" | "missionary";
