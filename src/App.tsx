@@ -1,14 +1,14 @@
-import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import Layout from './components/Layout';
-import HomePage from './pages/HomePage';
-import OpportunityPage from './pages/OpportunityPage';
-import HowItWorks from './pages/HowItWorks';
-import Contact from './pages/Contact';
+import React from "react";
+import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
+import Layout from "./components/Layout";
+import HomePage from "./pages/HomePage";
+import OpportunityPage from "./pages/OpportunityPage";
+import HowItWorks from "./pages/HowItWorks";
+import Contact from "./pages/Contact";
 
 function App() {
   return (
-    <Router>
+    <Router basename="/MissionGoDemo">
       <Layout>
         <Routes>
           <Route path="/" element={<HomePage />} />
