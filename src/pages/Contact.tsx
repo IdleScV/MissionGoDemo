@@ -1,5 +1,5 @@
-import React from 'react';
-import { Mail, Phone, MapPin } from 'lucide-react';
+import React from "react";
+import { Mail, Phone, MapPin } from "lucide-react";
 
 export default function Contact() {
   return (
@@ -16,14 +16,19 @@ export default function Contact() {
 
         <div className="grid md:grid-cols-2 gap-8">
           <div className="bg-white rounded-lg shadow-sm p-8">
-            <h2 className="text-2xl font-serif font-semibold mb-6">Get in Touch</h2>
+            <h2 className="text-2xl font-serif font-semibold mb-6">
+              Get in Touch
+            </h2>
             <div className="space-y-6">
               <div className="flex items-start">
                 <Mail className="h-6 w-6 text-blue-600 mt-1" />
                 <div className="ml-4">
                   <h3 className="font-medium">Email</h3>
-                  <a href="mailto:support@faithfulsponsors.org" className="text-blue-600 hover:underline">
-                    support@faithfulsponsors.org
+                  <a
+                    href="mailto:support@MissionGo.org"
+                    className="text-blue-600 hover:underline"
+                  >
+                    support@MissionGo.org
                   </a>
                 </div>
               </div>
@@ -32,7 +37,9 @@ export default function Contact() {
                 <div className="ml-4">
                   <h3 className="font-medium">Phone</h3>
                   <p>+1 (555) 123-4567</p>
-                  <p className="text-sm text-gray-500">Monday - Friday, 9am - 5pm EST</p>
+                  <p className="text-sm text-gray-500">
+                    Monday - Friday, 9am - 5pm EST
+                  </p>
                 </div>
               </div>
               <div className="flex items-start">
@@ -48,10 +55,15 @@ export default function Contact() {
           </div>
 
           <div className="bg-white rounded-lg shadow-sm p-8">
-            <h2 className="text-2xl font-serif font-semibold mb-6">Send a Message</h2>
+            <h2 className="text-2xl font-serif font-semibold mb-6">
+              Send a Message
+            </h2>
             <form className="space-y-4">
               <div>
-                <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-1">
+                <label
+                  htmlFor="name"
+                  className="block text-sm font-medium text-gray-700 mb-1"
+                >
                   Name
                 </label>
                 <input
@@ -61,7 +73,10 @@ export default function Contact() {
                 />
               </div>
               <div>
-                <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-1">
+                <label
+                  htmlFor="email"
+                  className="block text-sm font-medium text-gray-700 mb-1"
+                >
                   Email
                 </label>
                 <input
@@ -71,7 +86,10 @@ export default function Contact() {
                 />
               </div>
               <div>
-                <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-1">
+                <label
+                  htmlFor="message"
+                  className="block text-sm font-medium text-gray-700 mb-1"
+                >
                   Message
                 </label>
                 <textarea

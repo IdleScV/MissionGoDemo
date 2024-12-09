@@ -1,8 +1,8 @@
-import React from 'react';
-import Hero from '../components/Hero';
-import OpportunityCard from '../components/OpportunityCard';
-import SearchFilters from '../components/SearchFilters';
-import { useOpportunities } from '../hooks/useOpportunities';
+import React from "react";
+import Hero from "../components/Hero";
+import OpportunityCard from "../components/OpportunityCard";
+import SearchFilters from "../components/SearchFilters";
+import { useOpportunities } from "../hooks/useOpportunities";
 
 export default function HomePage() {
   const {
@@ -16,7 +16,7 @@ export default function HomePage() {
   return (
     <>
       <Hero />
-      
+
       <main className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
         <SearchFilters
           searchTerm={searchTerm}
@@ -24,7 +24,7 @@ export default function HomePage() {
           selectedType={selectedType}
           setSelectedType={setSelectedType}
         />
-        
+
         {opportunities.length === 0 ? (
           <div className="text-center py-12">
             <p className="text-gray-600 text-lg">
@@ -43,7 +43,8 @@ export default function HomePage() {
       <footer className="bg-white border-t mt-16">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-8">
           <p className="text-center text-gray-500">
-            © {new Date().getFullYear()} Faithful Sponsorships. All rights reserved.
+            © {new Date().getFullYear()} MissionGo Sponsorships. All rights
+            reserved.
           </p>
         </div>
       </footer>
