@@ -25,7 +25,7 @@ export default function Contact() {
                 <div className="ml-4">
                   <h3 className="font-medium">Email</h3>
                   <a
-                    href="mailto:support@MissionGo.org"
+                    href="mailto:support@missiongo.org"
                     className="text-blue-600 hover:underline"
                   >
                     support@MissionGo.org
